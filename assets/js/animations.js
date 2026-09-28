@@ -221,4 +221,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Crear partículas periódicamente (deshabilitado por defecto para rendimiento)
     // setInterval(createParticle, 3000);
+
+
+    // MOVIMIENTO TOP BAR
+    const barra = document.querySelector(".top-bar-content");
+    const texto = document.getElementById("contact-info");
+    
+    let posicion = barra.offsetWidth;
+    const velocidad = 2;
+    
+    function movimientoTxt() {
+        posicion -= velocidad;
+        texto.style.left = posicion + "px";
+    
+        if (posicion < -texto.offsetWidth) {
+            posicion = barra.offsetWidth;
+        }
+    
+        requestAnimationFrame(movimientoTxt);
+    }
+    
+    movimientoTxt();
 });

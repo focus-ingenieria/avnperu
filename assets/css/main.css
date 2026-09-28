@@ -16,19 +16,19 @@
 
 @font-face {
     font-family: 'CompassPoint';
-    src: url('../assets/font/CompassPoint.ttf') format('truetype');
+    src: url('../../assets/font/CompassPoint.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'VandalStreet';
-    src: url('../assets/font/VandalStreet-Regular.ttf') format('truetype');
+    src: url('../../assets/font/VandalStreet-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'AcornBrush';
-    src: url('../assets/font/AcornBrush.ttf') format('truetype');
+    src: url('../../assets/font/AcornBrush.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -57,23 +57,27 @@ body {
 }
 
 .top-bar-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    max-width: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;
     align-items: center;
+
+    overflow: hidden;
+    position: relative;*/
+
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 24px;
 }
 
-.contact-info {
-    display: flex;
-    gap: 2rem;
-}
 
-.contact-info span {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+#contact-info {
+    position: absolute;
+    white-space: nowrap;
+    left: 0px;
 }
 
 /* Header */
@@ -201,10 +205,52 @@ body {
     color: var(--accent-orange);
 }
 
+/* SECCIÓN COBERTURA */
+.card-cobertura {
+    margin: 20px auto;
+    background: white;
+    box-shadow: var(--shadow-lg);
+    border-radius: 20px;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.card-cobertura h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-orange);
+    text-align: center;
+}
+
+.card-cobertura p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-family: var(--bs-body-font-family);
+}
+
+.box-cobertura > img{
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.content-cobertura{
+    display: flex; /*esto hace poner los elementos horizontalmente*/
+    align-items: flex-start;   /* centra verticalmente los elementos*/ /*flex-start */
+    justify-content: space-between; /* separa los elementos y deja un espacio en medio */
+    gap: 30px;             /* espacio entre texto e imagen */
+}
+
+ .content-cobertura p{
+    flex: 1;               /* el texto ocupa el espacio disponible */
+}
+
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 51, 102, 52%), rgba(0, 51, 102, 81%)), 
-                url('../assets/images/ban1.png') center/cover no-repeat;
+                url('../../assets/images/ban1.png') center/cover no-repeat;
     padding: 3rem 0;
     position: relative;
     overflow: hidden;
@@ -501,9 +547,106 @@ body {
 .section-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 3rem;
-    color: var(--text-dark);
+    /*margin-bottom: 1.1rem;*/
+    color: #FF6B35;
 }
+
+
+
+/* NUEVAS BOTONERAS */
+.tabs-programa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0px 30px 0px;
+}
+
+.tab-btn:hover {
+    background: #FFC07F;
+    color: white;
+}
+
+.tab-btn.active {
+    background: var(--accent-orange);
+    color: white;
+}
+
+.tab-content{
+    display: none;
+}
+
+.tab-content.active{
+    display: block;
+}
+
+
+/* El encabezado será el contenedor de las olas */
+.wave-header{
+    position: relative;
+    overflow: hidden;
+}
+
+/* Primera ola */
+.wave-header::before{
+    content: "";
+    position: absolute;
+    left: -45%;
+    bottom: -8px;
+    width: 200%;
+    height: 75px;
+
+    background: rgba(255,255,255,.10);
+
+    border-radius: 45%;
+    animation: wave1 10s linear infinite;
+}
+
+/* Segunda ola */
+.wave-header::after{
+    content: "";
+    position: absolute;
+    left: -30%;
+    bottom: -14px;
+    width: 200%;
+    height: 65px;
+
+    background: rgba(255,255,255,.18);
+
+    border-radius: 40%;
+    animation: wave2 7s linear infinite reverse;
+}
+
+/* Mantener el texto encima de las olas */
+.wave-header > *{
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes wave1{
+    from{ transform: translateX(0); }
+    to  { transform: translateX(25%); }
+}
+
+@keyframes wave2{
+    from{ transform: translateX(0); }
+    to  { transform: translateX(-25%); }
+}
+
+
+
 
 .plans-grid {
     display: grid;
@@ -540,14 +683,35 @@ body {
 }
 
 .plan-type {
-    font-size: 0.875rem;
+    font-size: 1.15rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
+
+
 .plan-speed {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
 }
+
+.plan-speed span{
+    display:inline-flex;
+    flex-direction:column;
+    margin-left:2px;
+    line-height:1;
+    font-size:1.6rem;
+    text-align: left;
+    vertical-align:super;
+}
+
+.plan-speed small{
+    font-size:1rem;
+    font-weight:400;
+    margin-top:2px;
+}
+
+
 
 .plan-body {
     padding: 2rem;
@@ -565,7 +729,7 @@ body {
 }
 
 .price-main {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 800;
     color: var(--text-dark);
 }
@@ -573,6 +737,18 @@ body {
 .price-detail {
     font-size: 0.875rem;
     color: var(--gray);
+}
+
+.description > br{
+    margin-bottom: 0px
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
 }
 
 .plan-button {
@@ -592,6 +768,22 @@ body {
 .plan-button:hover {
     background: #E55A2B;
     transform: translateY(-2px);
+}
+
+.form-cobertura {
+    background: #003366;
+    margin: 15px 30px;
+    font-size: 0.875rem;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+
+}
+
+.form-cobertura h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
 }
 
 .featured-plan {
@@ -626,6 +818,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
 }
 
 .benefit-item {
