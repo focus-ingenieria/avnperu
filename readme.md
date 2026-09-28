@@ -27,3 +27,7 @@ avnperu/
 │   │
 │   └── fonts/
 │       └── Inter/
+
+
+creacion de nueva rama llamada -> "gerson"
+linea 2 de gerson
