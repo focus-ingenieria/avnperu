@@ -46,12 +46,12 @@
                 <div class="footer-section">
                     <h4>Contáctanos</h4>
                     <p>📞 0800-12345</p>
-                    <p>📱 999 999 999</p>
+                    <p>📱 977 592 442</p>
                     <p>✉️ ventas@avnperu.pe</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AVN Perú. Todos los derechos reservados.</p>
+                <p>&copy; 2026 AVN Perú. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

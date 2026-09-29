@@ -1,33 +1,7 @@
-avnperu/
-│
-├── index.html
-├── planes.html
-├── cobertura.html
-├── soporte.html
-├── empresa.html
-├── contacto.html
-├── contratar.html
-│
-├── css/
-│   ├── main.css          (estilos principales)
-│   ├── responsive.css    (media queries)
-│   └── animations.css    (animaciones)
-│
-├── js/
-│   ├── main.js          (funcionalidad principal)
-│   ├── animations.js    (scroll animations)
-│   ├── form-validator.js (validación forms)
-│   └── speed-widget.js  (widget velocidad)
-│
-├── assets/
-│   ├── images/
-│   │   ├── logo.svg
-│   │   ├── hero-bg.webp
-│   │   └── icons/
-│   │
-│   └── fonts/
-│       └── Inter/
+pasos para agregar al git 
+git init
+git status 
+git add .
+git commit -m "aca colocas lo que has arreglado"
+git push -u origin main
 
-
-creacion de nueva rama llamada -> "gerson"
-linea 2 de gerson

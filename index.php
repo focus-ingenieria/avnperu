@@ -42,46 +42,51 @@
                     </div>
                     <div class="promo-details">
                         <div class="promo-price">
-                            <span class="price-regular">Precio regular: S/ 79.90</span>
+                            <span class="price-regular">Precio regular: S/ 129.00</span>
                         </div>
                         <div class="promo-price">                            
                             <span class="price-currency">S/</span>
-                            <span class="price-promo">74</span>
+                            <span class="price-promo">100</span>
                             <span class="price-decimal2">.</span>
-                            <span class="price-decimal">90</span>
+                            <span class="price-decimal">00</span>
                         </div>
                         <div class="promo-duration">Pago Puntual x 6 meses</div>
                     </div>
                 </div>
+                
                 <br>
                 <a href="contratar.html" class="cta-button">Lo quiero</a>
             </div>
 
             <div class="form-card">
                 <div class="form-header">
-                    <h3>¡Déjanos tu número y te llamamos!</h3>
+                    <h3>¿Éstas interasado(a)? ¡Contactanos!</h3>
                 </div>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Ingresa tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Ingresa tu número*" required>
-                    </div>
-                    <div class="form-checkbox">
-                        <input type="checkbox" id="terms" required>
-                        <label for="terms">Autorizo el contacto para recibir información sobre AVN según los términos
-                            generales y condiciones.</label>
-                    </div>
-                    <button type="submit" class="form-submit">Llámenme</button>
-                </form>
+                
+                <div class="form-group">
+                    <a href="https://wa.me/51977592442?text=Hola,%20quiero%20información%20sobre%20los%20planes%20de%20Internet"
+                           class="whatsapp-contact"
+                            target="_blank"
+                           rel="noopener noreferrer">
+                      <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
+                    </a>
+
+                    <b>Ó</b>
+
+                    <p>
+                        Si te decidiste por el plan, consulta nuestra cobertura y 
+                        contactanos para agendar la instalación.
+                    </p>
+                </div>
+                    <a href="cobertura.php" class="form-submit">Consulta nuestra cobertura</a>
+                
                 <div class="form-schedule">
                     <strong>Horario de atención</strong><br>
                     Lunes a Sábado de 7:00 am a 10:00 pm
                 </div>
             </div>
 
-            <!-- POPUP DE CONFIRMACIÓN -->
+            <!-- POPUP DE CONFIRMACIÓN 
             <div id="successModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-icon">&#10003;</div>
@@ -98,7 +103,7 @@
                         Entendido
                     </button>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>
@@ -463,61 +468,6 @@
                     <p>Puedes contratar llamando al (01) 7064247, por WhatsApp o llenando el formulario
                         en nuestra página web. La instalación es gratuita y rápida.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Price Table Section -->
-    <section class="price-table-section">
-        <div class="section-container">
-            <h2 class="section-title">Precios Paquetes AVN Internet y TV</h2>
-
-            <div class="price-table">
-                <div class="table-header">
-                    Todos nuestros planes incluyen instalación GRATIS
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Plan</th>
-                            <th>Internet Fibra Óptica</th>
-                            <th>TV</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Internet 100% fibra óptica + TV</td>
-                            <td>400 Mbps</td>
-                            <td>TV (30 canales)</td>
-                            <td class="price-cell">S/69.90</td>
-                        </tr>
-                        <tr>
-                            <td>Internet 100% fibra óptica + TV</td>
-                            <td>1000 Mbps</td>
-                            <td>TV (30 canales)</td>
-                            <td class="price-cell">S/79.90</td>
-                        </tr>
-                        <tr>
-                            <td>Internet 100% fibra óptica + TV L1MAX</td>
-                            <td>Desde 100 Mbps hasta 1000 Mbps</td>
-                            <td>TV (30 canales)</td>
-                            <td class="price-cell">S/99.90</td>
-                        </tr>
-                        <tr>
-                            <td>Internet 100% fibra óptica + TV L1MAX</td>
-                            <td>Desde 200 Mbps hasta 1000 Mbps</td>
-                            <td>TV básico (80 canales)</td>
-                            <td class="price-cell">S/124.90</td>
-                        </tr>
-                        <tr>
-                            <td>Internet 100% fibra óptica + TV Avanza</td>
-                            <td>Desde 200 Mbps hasta 1000 Mbps</td>
-                            <td>TV Avanza (100 canales)</td>
-                            <td class="price-cell">S/128.90</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>

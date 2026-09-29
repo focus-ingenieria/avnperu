@@ -142,7 +142,7 @@ body {
 }
 
 .logo-image {
-    height: 50px;
+    height: 65px;
     width: auto;
     max-width: 180px;
     object-fit: contain;
@@ -151,21 +151,21 @@ body {
 /* Ajustes responsive para el logo */
 @media (max-width: 1200px) {
     .logo-image {
-        height: 45px;
+        height: 65px;
         max-width: 160px;
     }
 }
 
 @media (max-width: 768px) {
     .logo-image {
-        height: 40px;
+        height: 55px;
         max-width: 140px;
     }
 }
 
 @media (max-width: 480px) {
     .logo-image {
-        height: 35px;
+        height: 40px;
         max-width: 120px;
     }
 }
@@ -478,37 +478,20 @@ body {
 
 .form-group {
     margin-bottom: 1rem;
+    text-align: center;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #E5E7EB;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: var(--primary-blue);
-}
-
-.form-checkbox {
-    display: flex;
-    align-items: start;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.75rem;
-    color: var(--gray);
-}
-
-.form-checkbox input {
-    margin-top: 0.25rem;
+.form-group > b{
+    
+    font-size: 1.7rem;
 }
 
 .form-submit {
-    width: 100%;
+    display: block;
+    width: 320px;
+    margin: 0 auto;
+
+    width: 290px;
     background: var(--accent-orange);
     color: var(--white);
     padding: 1rem;
@@ -518,6 +501,8 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
 }
 
 .form-submit:hover {
@@ -738,6 +723,7 @@ body {
     font-size: 0.875rem;
     color: var(--gray);
 }
+
 
 .description > br{
     margin-bottom: 0px

@@ -19,7 +19,7 @@
     <div class="top-bar">
         <div class="top-bar-content">
             <div id="contact-info">
-                Atención al cliente: <strong>Whatsapp: 945426246 </strong>|
+                Atención al cliente: <strong>Whatsapp: 977-592-442 </strong>|
                 AVN PERÚ - Fibra Óptica de Máxima Velocidad
             </div>
         </div>
@@ -33,7 +33,7 @@
                     <span>Distribuidor</span>
                     <span>Autorizado</span>
                 </div> -->
-                <a href="index.html" class="logo-link">
+                <a href="index.php" class="logo-link">
                     <img src="assets/images/logo_color.png" alt="AVN Logo" class="logo-image">
                 </a>
                 <nav>
@@ -48,7 +48,7 @@
             </div>
             <div class="sales-contact">
                 <div class="sales-label">Línea Exclusiva de Venta</div>
-                <div class="sales-phone">977592442</div>
+                <div class="sales-phone">977 592 442</div>
             </div>
         </div>
     </header>

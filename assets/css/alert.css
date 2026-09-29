@@ -104,3 +104,14 @@
 .whatsapp-float img{
   width: 36px;
 }
+
+.whatsapp-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatsapp-contact > img {
+    width: 90px;
+    height: 90px;
+}

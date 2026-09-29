@@ -50,8 +50,17 @@
         cursor: pointer;
         padding: 0.5rem;
     }
-    
+
     /* Hero */
+    .hero-title{
+        font-size: 1.2rem;
+    }
+
+    .hero-subtitle{
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -59,6 +68,29 @@
     
     .hero-content {
         text-align: center;
+    }
+
+    /* Promo */
+    .speed-number{
+        font-size: 3.5rem;
+    }
+
+    .channel-number2{
+        font-size: 2rem;
+    }
+
+    .promo-details{
+        text-align: center;
+    }
+
+    /* Formulario */
+    .form-header h3{
+        font-size: 1.4rem;
+    }
+
+    /* FAQ */
+    .faq-question{
+        font-size: 1rem;
     }
     
     .promo-card {
@@ -75,7 +107,14 @@
     
     /* Plans */
     .plans-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .plan-card {
+        width: 380px;
     }
     
     .featured-plan {
@@ -86,6 +125,28 @@
     .benefits-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    /* Cobertura */
+    .card-cobertura {
+        padding: 1.5rem;
+    }
+    
+    .card-cobertura h3 {
+        font-size: 2rem;
+    }
+    
+    .content-cobertura {
+        gap: 20px;
+    }
+    
+    .content-cobertura p {
+        font-size: 1rem;
+    }
+    
+    .box-cobertura > img {
+        width: 350px;
+        max-width: 100%;
     }
     
     /* Footer */
@@ -116,6 +177,57 @@
     .sales-contact {
         display: none;
     }
+
+    /* Hero */
+    .hero-title{
+        font-size: .95rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle{
+        font-size: 1.8rem;
+    }
+
+    .promo-card{
+        padding: 0;
+    }
+
+    .speed-number{
+        font-size: 3rem;
+    }
+
+    .speed-unit{
+        font-size: 1rem;
+    }
+
+    /* Botón */
+    .cta-button{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Formulario */
+    .form-group input{
+        font-size: 16px;
+    }
+
+    .form-submit{
+        width: 100%;
+    }
+
+    /* Beneficios */
+    .benefit-item{
+        padding: 1rem;
+    }
+
+    /* FAQ */
+    .faq-question{
+        padding: 1rem;
+    }
+
+    .faq-answer{
+        padding: 0 1rem 1rem;
+    }
     
     /* Hero */
     .hero {
@@ -143,19 +255,44 @@
     .price-main {
         font-size: 2rem;
     }
-    
-    /* Table */
-    .price-table {
-        overflow-x: auto;
+
+    /* Cobertura */
+    .card-cobertura {
+        width: 90%;
+        padding: 1.2rem;
     }
-    
-    table {
-        min-width: 600px;
+
+    .card-cobertura h3 {
+        font-size: 1.75rem;
+    }
+
+    .content-cobertura {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .content-cobertura p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .box-cobertura {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-cobertura > img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
     }
     
     /* Footer */
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1rem;
         text-align: center;
     }
     
@@ -173,10 +310,126 @@
 
 /* Móviles pequeños */
 @media (max-width: 480px) {
+    /* Tarjeta promoción */
+    .promo-card{
+        width: 85%;          /* más angosta */
+        max-width: 280px;    /* límite */
+        margin: 0 auto 2rem;
+        padding: 1rem;
+        gap: 1rem;           /* separación entre los elementos internos */
+    }
+
+    .promo-speed{
+        min-width: 100%;
+        padding: 0.8rem;
+    }
+
+    .promo-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;         /* separa precio regular, precio y etiqueta azul */
+    }
+
+    .cta-button{
+        width: 70%;
+    }
+
+    /* Precio de la promoción */
+    .promo-price{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 0;
+        margin-bottom: .3rem;
+    }
+
+    .price-currency,
+    .price-decimal,
+    .price-decimal2{
+        position: static;   /* elimina el relative del escritorio */
+        bottom: auto;
+        left: auto;
+    }
+
+    .price-currency{
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .price-promo{
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .price-decimal2{
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .price-decimal{
+        font-size: 1.2rem;
+    }
+
+    .price-regular{
+        position: static;
+        text-decoration: line-through;
+        font-size: .75rem;
+        justify-content: center;
+    }
+
+
     /* General spacing */
     .section-container {
         padding: 0 1rem;
     }
+
+    /* Tarjeta promoción */
+    .speed-number{
+        font-size: 2.5rem;
+    }
+
+    .channel-number2{
+        font-size: 1.5rem;
+    }
+
+    .tv-info span{
+        font-size: .75rem !important;
+    }
+
+    /* Precio */
+    .price-main{
+        font-size: 1.7rem;
+    }
+
+    .price-detail{
+        font-size: .8rem;
+    }
+
+    /* Tabla */
+    .table-header{
+        font-size: .9rem;
+    }
+
+    /* FAQ */
+    .faq-question span:first-child{
+        width: calc(100% - 30px);
+    }
+
+    /* FAQ móvil */
+    .faq-answer {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 1rem 1rem;
+}
     
     /* Hero */
     .hero-title {
@@ -193,10 +446,6 @@
     }
     
     .speed-number {
-        font-size: 2rem;
-    }
-    
-    .price-promo {
         font-size: 2rem;
     }
     
@@ -226,6 +475,37 @@
     .payment-method {
         font-size: 0.75rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    /* Cobertura */
+    .card-cobertura {
+        width: 92%;
+        padding: 1rem;
+    }
+    
+    .card-cobertura h3 {
+        font-size: 1.4rem;
+    }
+    
+    .content-cobertura {
+        gap: 1rem;
+    }
+    
+    .content-cobertura p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    
+    .box-cobertura > img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1rem;
+        text-align: center;
     }
 }
 
