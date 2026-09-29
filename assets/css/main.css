@@ -101,9 +101,9 @@ body {
 
 .logo-section {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    align-items: center;    
     flex: 1;
+    gap: inherit;
 }
 
 .distributor-badge {
@@ -1087,4 +1087,8 @@ tr:hover {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.6);
+}
+
+.mobile-menu-toggle {
+    display: none;
 }

@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const texto = document.getElementById("contact-info");
     
     let posicion = barra.offsetWidth;
-    const velocidad = 2;
+    const velocidad = window.innerWidth < 640 ? 0.7 : 2;
     
     function movimientoTxt() {
         posicion -= velocidad;
