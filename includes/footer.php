@@ -23,22 +23,22 @@
                     <h4>Servicios</h4>
                     <ul>
                         <li><a href="index.php">Planes Internet</a></li>
-                        <li><a href="empresa.html">Internet Empresarial</a></li>
+                        <li><a href="empresa.php">Internet Empresarial</a></li>
                         <li><a href="cobertura.php">Cobertura</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Soporte</h4>
                     <ul>
-                        <li><a href="soporte.html">Centro de Ayuda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="soporte.php">Centro de Ayuda</a></li>
+                        <li><a href="contacto.php">Contacto</a></li>
                         <li><a href="#">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="empresa.html">Nosotros</a></li>
+                        <li><a href="empresa.php">Nosotros</a></li>
                         <li><a href="#">Términos y Condiciones</a></li>
                         <li><a href="#">Política de Privacidad</a></li>
                     </ul>
