@@ -1,5 +1,5 @@
 /* components.css — Piezas reutilizables en varias páginas:
-   botones, títulos, banner, título píldora, acordeón FAQ y modal. */
+   botones, títulos, banner, título píldora y acordeón FAQ. */
 
 /* ---------- Botones ---------- */
 .cta-button {
@@ -142,83 +142,6 @@
 
 .faq-item.active .faq-toggle {
     transform: rotate(45deg);
-}
-
-/* ---------- Modal de confirmación (#successModal) ---------- */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.modal.show {
-    display: flex;
-    animation: fadeIn 0.3s ease;
-}
-
-.modal-content {
-    background: var(--white);
-    width: 90%;
-    max-width: 420px;
-    padding: 35px 30px;
-    border-radius: var(--radius);
-    text-align: center;
-    animation: popup 0.35s ease;
-}
-
-.modal-icon {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 20px;
-    background: var(--success);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.modal-content h2 {
-    margin-bottom: 10px;
-    color: var(--text-dark);
-}
-
-.modal-content p {
-    color: var(--gray);
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.modal-btn {
-    background: var(--accent-orange);
-    color: var(--white);
-    border: none;
-    padding: 12px 28px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.modal-btn:hover {
-    background: var(--accent-orange-dark);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes popup {
-    from { transform: scale(0.8); opacity: 0; }
-    to   { transform: scale(1);   opacity: 1; }
 }
 
 /* ============================================================

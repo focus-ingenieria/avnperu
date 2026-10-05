@@ -1,5 +1,4 @@
-/* cobertura.css — Estilos exclusivos de cobertura.php.
-   El iframe del mapa de cobertura no se estiliza aquí (tiene estilos en línea). */
+/* cobertura.css — Estilos exclusivos de cobertura.php: tarjeta informativa y widget de cobertura. */
 
 .card-cobertura {
     width: 90%;
@@ -40,6 +39,16 @@
     border-radius: var(--radius);
 }
 
+/* Widget de FiberApu para consultar cobertura */
+.coverage-map {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: 580px;
+    margin: 0 auto;
+    border: 0;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -63,6 +72,10 @@
     .box-cobertura > img {
         width: 350px;
         max-width: 100%;
+    }
+
+    .coverage-map {
+        height: 560px;
     }
 }
 
@@ -95,6 +108,11 @@
         width: 100%;
         max-width: 400px;
     }
+
+    /* En móvil el widget se apila en columna y necesita más alto */
+    .coverage-map {
+        height: 620px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -117,5 +135,9 @@
 
     .box-cobertura > img {
         max-width: 100%;
+    }
+
+    .coverage-map {
+        height: 680px;
     }
 }

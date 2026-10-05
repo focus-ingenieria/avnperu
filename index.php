@@ -58,7 +58,8 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 
                 <br>
-                <a href="contratar.html" class="cta-button">Lo quiero</a>
+                <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar la promoción de 1000 Mbps + TV'); ?>"
+                   class="cta-button" target="_blank" rel="noopener">Lo quiero</a>
             </div>
 
             <div class="form-card">
@@ -67,10 +68,8 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 
                 <div class="form-group">
-                    <a href="https://wa.me/51977592442?text=Hola,%20quiero%20información%20sobre%20los%20planes%20de%20Internet"
-                           class="whatsapp-contact"
-                            target="_blank"
-                           rel="noopener noreferrer">
+                    <a href="<?php echo avn_whatsapp_url('Hola, quiero información sobre los planes de Internet'); ?>"
+                       class="whatsapp-contact" target="_blank" rel="noopener">
                       <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
                     </a>
 
@@ -88,25 +87,6 @@ require __DIR__ . '/includes/header.php';
                     Lunes a Sábado de 7:00 am a 10:00 pm
                 </div>
             </div>
-
-            <!-- POPUP DE CONFIRMACIÓN 
-            <div id="successModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-icon">&#10003;</div>
-
-                    <h2>¡Solicitud recibida!</h2>
-
-                    <p>
-                        Gracias por confiar en <strong>AVN Alta Velocidad Network</strong>.<br>
-                        Hemos recibido correctamente tu solicitud y uno de nuestros asesores
-                        se comunicará contigo en breve.
-                    </p>
-
-                    <button id="closeModal" class="modal-btn">
-                        Entendido
-                    </button>
-                </div>
-            </div> -->
 
         </div>
     </section>
@@ -155,7 +135,8 @@ require __DIR__ . '/includes/header.php';
                                     Instalación <b>Gratis</b>
                                 </p>
                             </div>
-                            <a href="contratar.html?plan=400" class="plan-button">Lo quiero</a>
+                            <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar el plan de 500 Mbps'); ?>"
+                               class="plan-button" target="_blank" rel="noopener">Lo quiero</a>
                         </div>
                     </div>
 
@@ -187,7 +168,8 @@ require __DIR__ . '/includes/header.php';
                                     Instalación <b>Gratis</b>
                                 </p>
                             </div>
-                            <a href="contratar.html?plan=1000" class="plan-button">Lo quiero</a>
+                            <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar el plan de 800 Mbps'); ?>"
+                               class="plan-button" target="_blank" rel="noopener">Lo quiero</a>
                         </div>
                     </div>
 
@@ -219,38 +201,11 @@ require __DIR__ . '/includes/header.php';
                                     Instalación <b>Gratis</b>
                                 </p>
                             </div>
-                            <a href="contratar.html?plan=1000-l1max" class="plan-button">Lo quiero</a>
+                            <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar el plan de 1000 Mbps'); ?>"
+                               class="plan-button" target="_blank" rel="noopener">Lo quiero</a>
                         </div>
                     </div>
 
-                    <!-- Plan 4 
-                    <div class="plan-card">
-                        <div class="plan-header orange">
-                            <div class="plan-type">TV L1MAX</div>
-                            <div class="plan-speed">1000Mbps</div>
-                        </div>
-                        <div class="plan-body">
-                            <p class="plan-description">TV (30 canales) + L1MAX</p>
-                            <div class="plan-price">
-                                <div class="price-main">S/ 124.90</div>
-                                <div class="price-detail">Precio con pago puntual</div>
-                            </div>
-                            <a href="contratar.html?plan=1000-l1max-plus" class="plan-button">Lo quiero</a>
-                        </div>
-                    </div>-->
-
-                    <!-- Featured Plan 
-                    <div class="featured-plan">
-                        <h3>Hasta 120Mbps hasta</h3>
-                        <div class="featured-price">1000Mbps</div>
-                        <p>TV (30+ canales) + L1MAX</p>
-                        <div style="margin-top: 1rem;">
-                            <span style="text-decoration: line-through;">Desde S/128.90</span>
-                            <div class="featured-price">S/ 128.90</div>
-                            <p style="font-size: 0.875rem;">Precio con pago puntual</p>
-                        </div>
-                        <a href="contratar.html?plan=featured" class="plan-button" style="margin-top: 1.5rem;">Lo quiero</a>
-                    </div>-->
                 </div>
             </div>
 
@@ -294,7 +249,8 @@ require __DIR__ . '/includes/header.php';
                                     Instalación <b>Gratis</b>
                                 </p>
                             </div>
-                            <a href="contratar.html?plan=400" class="plan-button">Lo quiero</a>
+                            <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar el plan Internet + TV de 500 Mbps'); ?>"
+                               class="plan-button" target="_blank" rel="noopener">Lo quiero</a>
                         </div>
                     </div>
 
@@ -330,7 +286,8 @@ require __DIR__ . '/includes/header.php';
                                     Instalación <b>Gratis</b>
                                 </p>
                             </div>
-                            <a href="contratar.html?plan=1000" class="plan-button">Lo quiero</a>
+                            <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar el plan Internet + TV de 800 Mbps'); ?>"
+                               class="plan-button" target="_blank" rel="noopener">Lo quiero</a>
                         </div>
                     </div>
 
@@ -366,7 +323,8 @@ require __DIR__ . '/includes/header.php';
                                     Instalación <b>Gratis</b>
                                 </p>
                             </div>
-                            <a href="contratar.html?plan=1000-l1max" class="plan-button">Lo quiero</a>
+                            <a href="<?php echo avn_whatsapp_url('Hola, quiero contratar el plan Internet + TV de 1000 Mbps'); ?>"
+                               class="plan-button" target="_blank" rel="noopener">Lo quiero</a>
                         </div>
                     </div>
 

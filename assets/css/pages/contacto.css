@@ -1,83 +1,116 @@
-/* contacto.css — Estilos exclusivos de contacto.php (formulario).
-   Movido sin cambios desde formulario.css; se rehará en la tarea del formulario. */
+/* contacto.css — Estilos exclusivos de contacto.php.
+   Contacto solo por WhatsApp, teléfono y correo (sin formulario). */
 
-.formulario h2 {
-    text-align: center;
-    color: #444;
-    font-size: 40px;
-    margin-top: 50px;
+.contact {
+    padding: 4rem 2rem 1rem;
 }
 
-.formulario p {
-    text-align: center;
-    color: #444;
-    font-size: 19px;
-    margin-bottom: 30px;
-}
-
-/* Fondo de circuitos volteado verticalmente */
-.formulario {
-    position: relative;
-}
-
-.formulario::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../../images/circuitos.png');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: scaleY(-1);
-}
-
-.formulario > * {
-    position: relative;
-    z-index: 1;
-}
-
-.form-container {
-    max-width: 600px;
-    margin: 15px auto;
-    padding: 20px;
-    border-radius: 15px;
+.contact-card {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
     background: var(--white);
-    display: flex;
-    flex-direction: column;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.contact-lead {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 1.75rem;
+}
+
+/* Botón principal de WhatsApp */
+.contact-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 2rem;
+    background: var(--whatsapp);
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-whatsapp:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
 
-.row-flex {
-    padding: 0 20px;
+/* Teléfonos y correo */
+.contact-list {
+    list-style: none;
+    margin: 2rem 0 1.5rem;
+    border-top: 1px solid var(--border);
 }
 
-.flex-grow input,
-.flex-grow textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 11px 8px;
-    font-size: 17px;
-    font-family: "Noto Sans", sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.contact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border);
 }
 
-.contador {
-    text-align: right;
-    font-size: 14px;
-    color: #666;
-    margin-top: -10px;
-    margin-bottom: 10px;
+.contact-list__label {
+    color: var(--gray);
+    font-size: 0.9rem;
 }
 
-#btnEnviar {
-    background-color: var(--accent-orange);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-size: 22px;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 100%;
+.contact-list a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: var(--primary-light);
+}
+
+.contact-schedule {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    .contact {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact {
+        padding: 2rem 1rem 0;
+    }
+
+    .contact-card {
+        padding: 2rem 1.25rem;
+    }
+
+    .contact-whatsapp {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-whatsapp {
+        font-size: 1rem;
+        padding: 0.9rem 1.25rem;
+    }
+
+    /* Etiqueta encima del dato */
+    .contact-list li {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
 }

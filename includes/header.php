@@ -8,6 +8,14 @@ if (!defined('AVN_WHATSAPP')) {
     define('AVN_EMAIL', 'ventas@avnperu.pe');
 }
 
+// Enlace de WhatsApp con mensaje predefinido (por defecto, al número de ventas)
+if (!function_exists('avn_whatsapp_url')) {
+    function avn_whatsapp_url(string $mensaje, string $numero = AVN_VENTAS_LINK): string
+    {
+        return 'https://wa.me/' . $numero . '?text=' . rawurlencode($mensaje);
+    }
+}
+
 $titulo       = $titulo ?? 'AVN PERÚ - Internet 100% Fibra Óptica';
 $paginaActual = $paginaActual ?? '';
 $paginaCss    = $paginaCss ?? '';
