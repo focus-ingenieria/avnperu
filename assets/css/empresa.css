@@ -6,11 +6,14 @@
     width: 100vw;
     height: 400px;
     position: relative;
+
     background-image: url('../images/banner_nosotros.jpeg');
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Sombreado del banner */
@@ -23,11 +26,9 @@
 }
 
 /* Posición del título */
-
 .banner-company h1 {
     position: relative;
     z-index: 1;
-    margin: 165px 50px;
     color: white;
 }
 

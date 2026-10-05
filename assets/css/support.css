@@ -4,11 +4,14 @@
     width: 100vw;
     height: 400px;
     position: relative;
+
     background-image: url('../images/banner_soporte.jpeg');
     background-size: cover;
     background-position: center;
+    
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* sombreado del banner */
@@ -23,7 +26,6 @@
 .banner-support h1 {
     position: relative;
     z-index: 1;
-    margin: 165px 50px;
     color: white;
 }
 
