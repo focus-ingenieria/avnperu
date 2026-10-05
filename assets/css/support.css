@@ -1,0 +1,43 @@
+
+/* imagen del banner horizontal */
+.banner-support {
+    width: 100vw;
+    height: 400px;
+    position: relative;
+    background-image: url('../images/banner_soporte.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* sombreado del banner */
+.banner-support::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Posicion del titulo */
+.banner-support h1 {
+    position: relative;
+    z-index: 1;
+    margin: 165px 50px;
+    color: white;
+}
+
+.support-description {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.section-title {
+    margin-bottom: 1rem;
+}
+
+li {
+    margin: 10px 0;
+}

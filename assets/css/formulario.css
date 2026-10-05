@@ -1,0 +1,90 @@
+.formulario h2 {
+    text-align: center;
+    color:#444;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.formulario p {
+    text-align: center;
+    color:#444;
+    font-size: 19px;
+    margin-bottom : 30px;
+}
+
+
+
+/* voltear fondo de imagen */
+.formulario {
+    position: relative;
+}
+
+.formulario::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../images/circuitos.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scaleY(-1);
+}
+
+.formulario > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.form-container {
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: white;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.row-flex{
+    padding: 0px 20px;
+}
+
+.flex-grow input, .flex-grow textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 11px 8px;
+    font-size: 17px;
+    font-family: "Noto Sans", sans-serif;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contador {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+#btnEnviar {
+    background-color: #FF6B35;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+}
+
+

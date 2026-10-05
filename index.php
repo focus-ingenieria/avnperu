@@ -177,7 +177,7 @@
                             <div class="description">
                                 <p>
                                     <img decoding="async" src="assets/images/fibra.jpg" with="25" height="24" alt="Fibra Óptica">
-                                    Internet Fibra Óptica 500 Mbps
+                                    Internet Fibra Óptica 800 Mbps
                                 </p>
                                 <p>
                                     <img decoding="async" src="assets/images/instalacion.png" with="25" height="24" alt="Instalación">
@@ -209,7 +209,7 @@
                             <div class="description">
                                 <p>
                                     <img decoding="async" src="assets/images/fibra.jpg" with="25" height="24" alt="Fibra Óptica">
-                                    Internet Fibra Óptica 500 Mbps
+                                    Internet Fibra Óptica 1000 Mbps
                                 </p>
                                 <p>
                                     <img decoding="async" src="assets/images/instalacion.png" with="25" height="24" alt="Instalación">
@@ -399,23 +399,6 @@
                     <p>Combina tus servicios y ahorra dinero mientras disfrutas de la comodidad de tener todo en un solo
                         paquete.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Payment Methods -->
-    <section class="payment-section">
-        <div class="payment-container">
-            <h3 class="payment-title">Formas de pago</h3>
-            <div class="payment-logos">
-                <span class="payment-method">Interbank</span>
-                <span class="payment-method">Yape</span>
-                <span class="payment-method">BCP</span>
-                <span class="payment-method">BBVA</span>
-                <span class="payment-method">Scotiabank</span>
-                <span class="payment-method">Banbif</span>
-                <span class="payment-method">WesternUnion</span>
-                <span class="payment-method">PagoEfectivo</span>
             </div>
         </div>
     </section>

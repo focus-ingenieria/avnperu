@@ -101,9 +101,9 @@ body {
 
 .logo-section {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    align-items: center;    
     flex: 1;
+    gap: inherit;
 }
 
 .distributor-badge {
@@ -635,8 +635,9 @@ body {
 
 .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
     gap: 2rem;
+    justify-content: center;
     margin-bottom: 3rem;
 }
 
@@ -737,8 +738,16 @@ body {
     justify-content: center;
 }
 
+.description p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0.5rem 0px;
+}
+
 .plan-button {
     width: 100%;
+    margin-top: 10px;
     padding: 0.75rem;
     background: var(--accent-orange);
     color: var(--white);
@@ -929,6 +938,8 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
 }
 
 .faq-item.active .faq-answer {
@@ -993,6 +1004,7 @@ tr:hover {
 
 /* Footer CTA */
 .footer-cta {
+    margin-top: 3rem;
     background: var(--primary-blue);
     padding: 3rem 0;
     text-align: center;
@@ -1073,4 +1085,8 @@ tr:hover {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.6);
+}
+
+.mobile-menu-toggle {
+    display: none;
 }

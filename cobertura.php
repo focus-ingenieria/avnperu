@@ -1,4 +1,4 @@
-<?php require 'includes/header.php';?>
+<?php require __DIR__ . '/includes/header.php';?>
 
 <section>
     <div class="card-cobertura">
@@ -15,8 +15,11 @@
             <div class="box-cobertura">
                 <img src="assets/images/cobertura_img.png" alt="Cobertura">
             </div>
+
         </div>
     </div>
 </section>
 
-<?php require 'includes/footer.php';?>
+<iframe src="https://fiberapu.com/widget/coverage?key=ffk_TGtTKRDr9SEeI8viC1VQTKlEFXJkFrJzD8PU93HO&color=%232563eb&height=320" title="Consulta de cobertura" style="width:100%;max-width:640px;height:580px;border:0"></iframe>
+
+<?php require __DIR__ . '/includes/footer.php';?>

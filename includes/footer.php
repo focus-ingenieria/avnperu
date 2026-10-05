@@ -8,8 +8,8 @@
                 <h2>¡Sólo tu número y te contactaremos!</h2>
                 <div class="cta-buttons">
                     <a href="contratar.html" class="btn-secondary">Contratar</a>
-                    <a href="https://wa.me/51999999999" class="btn-secondary">WhatsApp</a>
-                    <a href="tel:017064247" class="cta-button">Llamar Ahora</a>
+                    <a href="https://wa.me/<?php echo AVN_WHATSAPP_LINK; ?>" class="btn-secondary">WhatsApp</a>
+                    <a href="tel:<?php echo AVN_VENTAS_LINK; ?>" class="cta-button">Llamar Ahora</a>
                 </div>
             </div>
         </div>
@@ -45,9 +45,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contáctanos</h4>
-                    <p>📞 0800-12345</p>
-                    <p>📱 977 592 442</p>
-                    <p>✉️ ventas@avnperu.pe</p>
+                    <p>📞 <?php echo AVN_VENTAS_LINK; ?></p>
+                    <p>📱 <?php echo AVN_WHATSAPP; ?></p>
+                    <p>✉️ <?php echo AVN_EMAIL; ?></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -61,5 +61,7 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/form-validator.js"></script>
     <script src="assets/js/speed-widget.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/contador.js"></script>
 </body>
 </html>
