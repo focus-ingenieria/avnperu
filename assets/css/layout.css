@@ -1,9 +1,9 @@
-/* header.css — Barra superior + header + menú móvil
-   Todo lo del header (incluido responsive) vive aquí.*/
+/* layout.css — Estructura común a todas las páginas:
+   barra superior, header + menú móvil, contenedores, CTA del footer, footer y WhatsApp flotante. */
 
 /* ---------- Barra superior ---------- */
 .topbar {
-    background: #0098db;
+    background: var(--sky);
     color: var(--white);
     font-size: 0.85rem;
 }
@@ -93,6 +93,10 @@
     padding: 0;
 }
 
+.site-nav__list li {
+    margin: 10px 0;
+}
+
 .site-nav__link {
     display: block;
     padding: 0.5rem 0.9rem;
@@ -147,7 +151,7 @@
     box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
 }
 
-/* ---------- Botón hamburguesa (oculto en escritorio) ---------- */
+/* Botón hamburguesa (oculto en escritorio) */
 .site-header__toggle {
     display: none;
     width: 44px;
@@ -174,23 +178,125 @@
 .site-header__toggle.is-open span:nth-child(1) {
     transform: translateY(10.5px) rotate(45deg);
 }
+
 .site-header__toggle.is-open span:nth-child(2) {
     opacity: 0;
 }
+
 .site-header__toggle.is-open span:nth-child(3) {
     transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* ---------- Contenedor de sección ---------- */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ---------- CTA del footer ---------- */
+.footer-cta {
+    margin-top: 3rem;
+    background: var(--primary-blue);
+    padding: 3rem 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 3rem 0 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin: 10px 0;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- WhatsApp flotante ---------- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--whatsapp);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float img {
+    width: 36px;
 }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 968px) {
-
     /* Barra superior: solo el WhatsApp, centrado */
     .topbar__inner {
         justify-content: center;
         padding: 0.4rem 1rem;
     }
+
     .topbar__slogan {
         display: none;
     }
@@ -254,10 +360,47 @@
         justify-content: center;
         margin-top: 1rem;
     }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto 0;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+    }
+
+    .footer-grid {
+        gap: 2rem 1rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     .site-header__logo img {
         height: 40px;
+    }
+
+    .section-container {
+        padding: 0 1rem;
+    }
+}
+
+/* ---------- Impresión ---------- */
+@media print {
+    .topbar,
+    .site-header,
+    .footer-cta,
+    .footer,
+    .whatsapp-float {
+        display: none;
     }
 }

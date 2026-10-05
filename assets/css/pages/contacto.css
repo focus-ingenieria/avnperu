@@ -1,0 +1,116 @@
+/* contacto.css — Estilos exclusivos de contacto.php.
+   Contacto solo por WhatsApp, teléfono y correo (sin formulario). */
+
+.contact {
+    padding: 4rem 2rem 1rem;
+}
+
+.contact-card {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.contact-lead {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 1.75rem;
+}
+
+/* Botón principal de WhatsApp */
+.contact-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 2rem;
+    background: var(--whatsapp);
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Teléfonos y correo */
+.contact-list {
+    list-style: none;
+    margin: 2rem 0 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.contact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-list__label {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.contact-list a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: var(--primary-light);
+}
+
+.contact-schedule {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    .contact {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact {
+        padding: 2rem 1rem 0;
+    }
+
+    .contact-card {
+        padding: 2rem 1.25rem;
+    }
+
+    .contact-whatsapp {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-whatsapp {
+        font-size: 1rem;
+        padding: 0.9rem 1.25rem;
+    }
+
+    /* Etiqueta encima del dato */
+    .contact-list li {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+}

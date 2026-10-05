@@ -1,4 +1,7 @@
-<?php require __DIR__ . '/includes/header.php';?>
+<?php
+$paginaCss = 'cobertura';
+require __DIR__ . '/includes/header.php';
+?>
 
 <section>
     <div class="card-cobertura">
@@ -18,8 +21,11 @@
 
         </div>
     </div>
-</section>
 
-<iframe src="https://fiberapu.com/widget/coverage?key=ffk_TGtTKRDr9SEeI8viC1VQTKlEFXJkFrJzD8PU93HO&color=%232563eb&height=320" title="Consulta de cobertura" style="width:100%;max-width:640px;height:580px;border:0"></iframe>
+    <iframe class="coverage-map"
+            src="https://fiberapu.com/widget/coverage?key=ffk_TGtTKRDr9SEeI8viC1VQTKlEFXJkFrJzD8PU93HO&color=%232563eb&height=320"
+            title="Mapa de cobertura de AVN Perú: consulta si hay servicio en tu dirección"
+            loading="lazy"></iframe>
+</section>
 
 <?php require __DIR__ . '/includes/footer.php';?>

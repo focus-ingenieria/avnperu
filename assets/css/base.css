@@ -1,0 +1,85 @@
+/* base.css — Variables, fuentes, reset y tipografía.
+   Se carga en todas las páginas antes que layout.css y components.css. */
+
+:root {
+    /* Marca */
+    --primary-blue: #003366;
+    --primary-dark: #002244;
+    --primary-light: #0066FF;
+    --accent-orange: #FF6B35;
+    --accent-orange-dark: #E55A2B;
+    --accent-orange-soft: #FFC07F;
+    --sky: #0098db;
+    --cyan: #00FFFF;
+
+    /* Neutros */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --gray: #6B7280;
+    --text-dark: #1F2937;
+    --text-muted: #4A4A4A;
+    --border: #E5E7EB;
+
+    /* Estados y terceros */
+    --success: #16a34a;
+    --whatsapp: #25D366;
+    --info-bg: #E3F2FD;
+    --info-text: #1976D2;
+
+    /* Degradado de los títulos tipo píldora */
+    --gradient-pill: linear-gradient(45deg, var(--primary-light), var(--cyan));
+
+    /* Sombras y radios */
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --radius: 20px;
+    --radius-sm: 10px;
+}
+
+@font-face {
+    font-family: 'CompassPoint';
+    src: url('../font/CompassPoint.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VandalStreet';
+    src: url('../font/VandalStreet-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AcornBrush';
+    src: url('../font/AcornBrush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------- Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+/* Usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

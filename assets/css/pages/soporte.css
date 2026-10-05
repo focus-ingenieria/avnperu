@@ -1,0 +1,42 @@
+/* soporte.css — Estilos exclusivos de soporte.php.
+   El banner (.banner--soporte) y el acordeón FAQ están en components.css. */
+
+.support-description {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+/* Viñetas dentro de las respuestas */
+.support-section li {
+    margin: 10px 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    .support-description {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .support-description {
+        width: auto;
+        margin: 20px 1rem;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .support-section ul {
+        padding-left: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-section .faq-container {
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,736 @@
+/* inicio.css — Estilos exclusivos de index.php:
+   hero con promoción, tarjeta de contacto, planes con pestañas y beneficios. */
+
+/* ---------- Hero ---------- */
+.hero {
+    background: linear-gradient(rgba(0, 51, 102, 52%), rgba(0, 51, 102, 81%)),
+                url('../../images/ban1.png') center/cover no-repeat;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    animation: hero-float 20s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33%      { transform: translateY(-10px) rotate(2deg); }
+    66%      { transform: translateY(5px) rotate(-2deg); }
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    color: var(--white);
+}
+
+.hero-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* ---------- Tarjeta de promoción ---------- */
+.promo-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.promo-speed {
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: 1.2rem;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 180px;
+}
+
+.speed-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.speed-number {
+    font-family: 'CompassPoint', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.speed-unit {
+    font-family: 'CompassPoint', sans-serif;
+    font-size: 2.2rem;
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.speed-extra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.channel-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    position: relative;
+    top: -8px;
+}
+
+.channel-number2 {
+    font-family: 'CompassPoint', sans-serif;
+    font-size: 3.5rem;
+}
+
+.tv-info {
+    font-family: 'CompassPoint', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+.promo-details {
+    flex: 1;
+}
+
+.promo-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-regular {
+    font-size: 0.875rem;
+    color: var(--gray);
+    text-decoration: line-through;
+    position: relative;
+    bottom: -25px;
+}
+
+.price-promo {
+    font-family: 'CompassPoint', sans-serif;
+    font-size: 5.8rem;
+    color: var(--primary-blue);
+}
+
+.price-currency,
+.price-decimal2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    position: relative;
+    bottom: 35px;
+}
+
+.price-decimal {
+    font-family: 'CompassPoint', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    position: relative;
+    bottom: 35px;
+    left: -10px;
+}
+
+.promo-duration {
+    background: var(--info-bg);
+    color: var(--info-text);
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+/* ---------- Tarjeta de contacto del hero ---------- */
+.form-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-header h3 {
+    color: var(--accent-orange);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-group > b {
+    font-size: 1.7rem;
+}
+
+.whatsapp-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatsapp-contact > img {
+    width: 90px;
+    height: 90px;
+}
+
+.form-submit {
+    display: block;
+    width: 290px;
+    margin: 0 auto;
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form-submit:hover {
+    background: var(--accent-orange-dark);
+    transform: translateY(-2px);
+}
+
+.form-schedule {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+/* ---------- Planes ---------- */
+.plans-section {
+    padding: 4rem 0;
+    background: var(--light-gray);
+}
+
+/* Pestañas "Solo Internet" / "Internet + TV" */
+.tabs-programa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: var(--light-gray);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0 30px;
+}
+
+.tab-btn:hover {
+    background: var(--accent-orange-soft);
+    color: var(--white);
+}
+
+.tab-btn.active {
+    background: var(--accent-orange);
+    color: var(--white);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.plan-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.plan-header {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.plan-header.blue {
+    background: var(--primary-blue);
+}
+
+.plan-header.orange {
+    background: var(--accent-orange);
+}
+
+/* Olas animadas en la cabecera del plan */
+.wave-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-header::before {
+    content: "";
+    position: absolute;
+    left: -45%;
+    bottom: -8px;
+    width: 200%;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 45%;
+    animation: wave1 10s linear infinite;
+}
+
+.wave-header::after {
+    content: "";
+    position: absolute;
+    left: -30%;
+    bottom: -14px;
+    width: 200%;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 40%;
+    animation: wave2 7s linear infinite reverse;
+}
+
+/* Mantener el texto encima de las olas */
+.wave-header > * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes wave1 {
+    from { transform: translateX(0); }
+    to   { transform: translateX(25%); }
+}
+
+@keyframes wave2 {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-25%); }
+}
+
+.plan-type {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.plan-speed {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.plan-speed span {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 2px;
+    line-height: 1;
+    font-size: 1.6rem;
+    text-align: left;
+    vertical-align: super;
+}
+
+.plan-speed small {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.plan-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.plan-price {
+    margin-bottom: 1.5rem;
+}
+
+.price-main {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.price-detail {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0.5rem 0;
+}
+
+.plan-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0.75rem;
+    background: var(--accent-orange);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: block;
+}
+
+.plan-button:hover {
+    background: var(--accent-orange-dark);
+    transform: translateY(-2px);
+}
+
+/* ---------- Beneficios ---------- */
+.benefits-section {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+
+    background: rgba(0, 51, 102, 0.1);
+
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.benefit-item:hover .benefit-icon {
+    background: var(--primary-blue);
+    transform: scale(1.1);
+}
+
+.benefit-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+
+/* ---------- FAQ de inicio ---------- */
+.faq-section {
+    padding: 4rem 0;
+    background: var(--light-gray);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .promo-card {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 2rem;
+    }
+
+    .promo-details {
+        text-align: center;
+    }
+
+    .speed-number {
+        font-size: 3.5rem;
+    }
+
+    .channel-number2 {
+        font-size: 2rem;
+    }
+
+    .form-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .form-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .plans-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .plan-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero-title {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .promo-card {
+        padding: 0;
+    }
+
+    .speed-number {
+        font-size: 2.5rem;
+    }
+
+    .speed-unit {
+        font-size: 1rem;
+    }
+
+    .price-promo {
+        font-size: 2.5rem;
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+
+    .plans-grid {
+        gap: 1.5rem;
+    }
+
+    .plan-speed {
+        font-size: 2rem;
+    }
+
+    .price-main {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .promo-card {
+        width: 85%;
+        max-width: 280px;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .promo-speed {
+        min-width: 120px;
+        padding: 1rem;
+    }
+
+    .speed-number {
+        font-size: 2rem;
+    }
+
+    .channel-number2 {
+        font-size: 1.5rem;
+    }
+
+    /* !important: el span "TV" tiene font-size en línea */
+    .tv-info span {
+        font-size: 0.75rem !important;
+    }
+
+    .promo-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .promo-price {
+        justify-content: center;
+        gap: 0;
+        margin-bottom: 0.3rem;
+    }
+
+    /* Quitar los desplazamientos del precio de escritorio */
+    .price-regular,
+    .price-currency,
+    .price-decimal,
+    .price-decimal2 {
+        position: static;
+    }
+
+    .price-regular {
+        font-size: 0.75rem;
+    }
+
+    .price-currency,
+    .price-decimal2 {
+        font-size: 1.5rem;
+    }
+
+    .price-promo {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .price-decimal {
+        font-size: 1.2rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .plan-card {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .price-main {
+        font-size: 1.7rem;
+    }
+
+    .price-detail {
+        font-size: 0.8rem;
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+@media print {
+    .hero {
+        background: none;
+        color: black;
+    }
+
+    .form-card,
+    .cta-button,
+    .plan-button {
+        display: none;
+    }
+}
