@@ -1,4 +1,7 @@
-<?php require __DIR__ . '/includes/header.php';?>
+<?php
+$paginaCss = 'contacto';
+require __DIR__ . '/includes/header.php';
+?>
 
 <section class="formulario">
 

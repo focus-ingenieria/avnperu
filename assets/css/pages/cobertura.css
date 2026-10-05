@@ -1,0 +1,121 @@
+/* cobertura.css — Estilos exclusivos de cobertura.php.
+   El iframe del mapa de cobertura no se estiliza aquí (tiene estilos en línea). */
+
+.card-cobertura {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-cobertura h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-orange);
+    text-align: center;
+}
+
+.card-cobertura p {
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+
+/* Texto a la izquierda, imagen a la derecha */
+.content-cobertura {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.content-cobertura p {
+    flex: 1;
+}
+
+.box-cobertura > img {
+    width: 500px;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    .card-cobertura {
+        padding: 1.5rem;
+    }
+
+    .card-cobertura h3 {
+        font-size: 2rem;
+    }
+
+    .content-cobertura {
+        gap: 20px;
+    }
+
+    .content-cobertura p {
+        font-size: 1rem;
+    }
+
+    .box-cobertura > img {
+        width: 350px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .card-cobertura {
+        padding: 1.2rem;
+    }
+
+    .card-cobertura h3 {
+        font-size: 1.75rem;
+    }
+
+    .content-cobertura {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .content-cobertura p {
+        font-size: 0.95rem;
+    }
+
+    .box-cobertura {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-cobertura > img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-cobertura {
+        width: 92%;
+        padding: 1rem;
+    }
+
+    .card-cobertura h3 {
+        font-size: 1.4rem;
+    }
+
+    .content-cobertura {
+        gap: 1rem;
+    }
+
+    .content-cobertura p {
+        font-size: 0.85rem;
+    }
+
+    .box-cobertura > img {
+        max-width: 100%;
+    }
+}

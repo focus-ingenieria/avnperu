@@ -1,4 +1,7 @@
-<?php require __DIR__ . '/includes/header.php';?>
+<?php
+$paginaCss = 'inicio';
+require __DIR__ . '/includes/header.php';
+?>
 <!-- Loading Screen 
     <div class="loading-screen" id="loadingScreen">
         <div class="data-particles" id="particles"></div>
@@ -377,7 +380,7 @@
     <!-- Benefits Section -->
     <section class="benefits-section">
         <div class="section-container">
-            <h2 class="section-title" style="color: #FF6B35;">¿Por qué contratar <b>Internet AVN</b>?</h2>
+            <h2 class="section-title">¿Por qué contratar <b>Internet AVN</b>?</h2>
 
             <div class="benefits-grid">
                 <div class="benefit-item">

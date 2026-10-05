@@ -10,6 +10,7 @@ if (!defined('AVN_WHATSAPP')) {
 
 $titulo       = $titulo ?? 'AVN PERÚ - Internet 100% Fibra Óptica';
 $paginaActual = $paginaActual ?? '';
+$paginaCss    = $paginaCss ?? '';
 
 // Menú definido una sola vez: clave => [texto, archivo]
 $menu = [
@@ -31,14 +32,15 @@ $menu = [
     <link rel="icon" type="image/png" href="assets/images/icon-avn.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/alert.css">
-    <link rel="stylesheet" href="assets/css/empresa.css">
-    <link rel="stylesheet" href="assets/css/formulario.css">
-    <link rel="stylesheet" href="assets/css/support.css">
+    <!-- CSS común a todas las páginas -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+
+    <!-- CSS propio de la página: cada página define $paginaCss antes de incluir el header -->
+    <?php if ($paginaCss !== ''): ?>
+    <link rel="stylesheet" href="assets/css/pages/<?php echo $paginaCss; ?>.css">
+    <?php endif; ?>
 </head>
 <body>
 

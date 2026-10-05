@@ -1,0 +1,283 @@
+/* components.css — Piezas reutilizables en varias páginas:
+   botones, títulos, banner, título píldora, acordeón FAQ y modal. */
+
+/* ---------- Botones ---------- */
+.cta-button {
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--primary-blue);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Títulos ---------- */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+}
+
+/* Título con fondo degradado en forma de píldora */
+.title-pill {
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.15rem 1.5rem;
+    color: var(--white);
+    background: var(--gradient-pill);
+    border-radius: 50px 10px 50px 10px;
+    text-align: center;
+    line-height: 1.35;
+}
+
+/* ---------- Banner de página ----------
+   Uso: <div class="banner banner--empresa"><h1>Título</h1></div>
+   Para una página nueva, solo añade un modificador con su imagen. */
+.banner {
+    position: relative;
+    height: 400px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sombreado para que el título se lea */
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.banner h1 {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+}
+
+.banner--empresa {
+    background-image: url('../images/banner_nosotros.jpeg');
+}
+
+.banner--soporte {
+    background-image: url('../images/banner_soporte.jpeg');
+}
+
+/* ---------- Acordeón FAQ ---------- */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.faq-item {
+    background: var(--white);
+    margin-bottom: 1rem;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(0, 51, 102, 0.05);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* ---------- Modal de confirmación (#successModal) ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    animation: popup 0.35s ease;
+}
+
+.modal-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background: var(--success);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.modal-content p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.modal-btn {
+    background: var(--accent-orange);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.modal-btn:hover {
+    background: var(--accent-orange-dark);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes popup {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    .banner {
+        height: 300px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner {
+        height: 240px;
+        padding: 0 1.5rem;
+    }
+
+    .banner h1 {
+        font-size: 1.6rem;
+    }
+
+    .faq-question {
+        padding: 1rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        width: 70%;
+    }
+
+    .banner {
+        height: 200px;
+        padding: 0 1rem;
+    }
+
+    .faq-question span:first-child {
+        width: calc(100% - 30px);
+    }
+}

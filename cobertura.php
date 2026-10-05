@@ -1,4 +1,7 @@
-<?php require __DIR__ . '/includes/header.php';?>
+<?php
+$paginaCss = 'cobertura';
+require __DIR__ . '/includes/header.php';
+?>
 
 <section>
     <div class="card-cobertura">

@@ -1,0 +1,121 @@
+/* empresa.css — Estilos exclusivos de empresa.php.
+   El banner (.banner--empresa) y los títulos (.title-pill) están en components.css. */
+
+.company-content {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.company-content > h2 {
+    margin: 0 0 12px 15px;
+}
+
+.company-description {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.company-description p,
+.company-predescription p {
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--text-muted);
+}
+
+.company-description p {
+    margin-bottom: 1rem;
+}
+
+.company-predescription h2 {
+    margin: 0 0 25px 15px;
+}
+
+.company-predescription p {
+    margin: 12px 0 25px;
+}
+
+/* Misión, visión... a la izquierda e imagen a la derecha */
+.point {
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.point-content {
+    width: 60%;
+}
+
+.point h3 {
+    margin: 40px 0 12px;
+}
+
+.img-telecomu {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-telecomu img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 968px) {
+    /* La imagen pasa debajo del texto */
+    .point {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 20px 0;
+    }
+
+    .point-content,
+    .img-telecomu {
+        width: 100%;
+    }
+
+    .img-telecomu img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .company-content {
+        width: auto;
+        margin: 20px 1rem;
+    }
+
+    .company-content > h2,
+    .company-predescription h2 {
+        margin-left: 0;
+    }
+
+    .company-description {
+        padding: 10px 0;
+    }
+
+    /* En pantallas estrechas el texto justificado deja huecos grandes */
+    .company-description p,
+    .company-predescription p {
+        text-align: left;
+    }
+
+    .point h3 {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .point h3 {
+        font-size: 1.1rem;
+    }
+}

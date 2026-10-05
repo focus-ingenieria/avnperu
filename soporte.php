@@ -1,9 +1,12 @@
-<?php require __DIR__ . '/includes/header.php';?>
+<?php
+$paginaCss = 'soporte';
+require __DIR__ . '/includes/header.php';
+?>
 
 
 <section class="support-section">
     
-    <div class="banner-support">
+    <div class="banner banner--soporte">
         <h1>Ayuda / Soporte</h1> 
     </div>
 
